@@ -1,6 +1,8 @@
 # Object detector
 
-> object_detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=40)
+```
+object_detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=40)
+```
 
 Отделяет фон от потенциальных объектов по Gaussian mixture model background subtraction
 
@@ -11,6 +13,7 @@
 Входное видео (roadway.mp4) : транспортные средства занимают здесь передний план, и их динамический характер объясняет изменение уровней интенсивности точек на дороге.  
 
 Мы собираемся смоделировать каждую точку в пространстве для всех трех каналов изображения, а именно R, G и B, как бимодальное распределение гауссов, где один гауссиан в смеси приходится на фон, а другой на передний план.
+
 
 > ### Алгоритм:
 > 

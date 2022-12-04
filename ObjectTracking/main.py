@@ -1,10 +1,10 @@
 import cv2
-from tracker import *
+from ObjectTracking.tracker import *
 
 # Создаем объект трекера
 tracker = Tracker()
 
-cap = cv2.VideoCapture("roadway.mp4")
+cap = cv2.VideoCapture("content/roadway.mp4")
 
 # читать readme.md
 object_detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=40)
